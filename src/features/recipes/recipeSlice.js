@@ -97,7 +97,7 @@ export default recipeSlice.reducer
 export const selectRecipeEntities = state => state.recipes.entities 
 export const selectRecipes = createSelector(selectRecipeEntities, entities => Object.values(entities))
 
-export const selectRecipeIds = state => selectRecipes(state).map(recipe => recipe.id);
+export const selectRecipeIds = state => selectRecipes(state).map(recipe => recipe.id).sort().reverse();
 export const selectRecipeById = (state, recipeId) => {
     return selectRecipeEntities(state)[recipeId];
 }

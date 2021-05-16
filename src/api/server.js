@@ -97,11 +97,19 @@ export default function makeServer(environment = "development") {
                 name: "Pork",
             })
 
+            var chicken = server.create("ingredient", {
+                name: "Chicken",
+            })
+
+            var paprika = server.create("ingredient", {
+                name: "Paprika",
+            })
+
             server.create("recipe", { 
                 name: "Plain pork",
                 servings: 5,
-                cookTimeInMinutes: 60,
-                instructions:"1. Put salt on pork\n2. Put pork in oven\n3. Eat pork",
+                cookTimeInMinutes: 120,
+                instructions:"1. Put paprika on pork\n2. Put pork in oven\n3. Eat pork",
              
                 recipeIngredients: [
                     server.create("recipeIngredient", {
@@ -109,8 +117,26 @@ export default function makeServer(environment = "development") {
                         amount: '1.4 kg',
                     }),
                     server.create("recipeIngredient", {
-                        ingredient: salt,
+                        ingredient: paprika,
                         amount: '1 tsp',
+                    }),
+                ]
+            })
+
+            server.create("recipe", { 
+                name: "Plain chicken",
+                servings: 3,
+                cookTimeInMinutes: 60,
+                instructions:"1. Put salt on chicken\n2. Put pork in oven\n3. Eat pork",
+             
+                recipeIngredients: [
+                    server.create("recipeIngredient", {
+                        ingredient: chicken,
+                        amount: '1.1 kg',
+                    }),
+                    server.create("recipeIngredient", {
+                        ingredient: salt,
+                        amount: '1/2 tsp',
                     }),
                 ]
             })
