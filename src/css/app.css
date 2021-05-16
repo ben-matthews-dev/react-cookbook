@@ -1,0 +1,83 @@
+@import-normalize;
+@import './font.css';
+@import './buttons.css';
+@import './recipe-list.css';
+@import './recipe.css';
+@import './ingredient-list.css';
+@import './recipe-edit.css';
+@import './navbar.css';
+@import './about.css';
+@import './loader.css';
+
+:root {
+  --app-color: #764abc;
+  --red-600: #e53e3e;
+}
+
+*, *::before, *::after {
+    font-family: Gotham Rounded, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    /* background: linear-gradient(90deg, #69b7eb, #b3dbd3, #f4d6db); */
+    background-color: #D1D5DB;
+    /* The trick is that 100vw represents 100% of the viewport including the scrollbar. 
+       If you subtract 100%, which is the available space without the scrollbar, 
+       you end up with the width of the scrollbar or 0 if it is not present. 
+       Creating a padding of that width on the left will simulate a second scrollbar, 
+       shifting centered content back to the right. */
+    padding-left: calc(100vw - 100%);
+}
+
+html {
+    font-size: 15px;
+}
+
+.mr-1 {
+    margin-right: 5px;
+} 
+
+.app {
+  max-width: 800px;
+  position: relative;
+  background-color: #fff;
+  margin-bottom: 40px;
+  margin: 6rem auto;
+  max-width: 900px;
+  box-shadow: -20px -20px 0px 0px rgba(100, 100, 100, 0.1);
+}
+
+
+.flex-parent {
+  display: flex;
+}
+
+.flex-child {
+  flex: 1;
+}
+
+  .parent {  
+  /* padding: 1rem;
+  padding-left: 0; */
+  /* border: 1px solid greenyellow; */
+}
+
+.child {
+  /* border: 1px solid red;  */
+  padding: 1rem;
+  /* padding-left: 0; */
+}
+
+  
+/* Main content */
+section {
+  padding: 0 1.5rem;
+  
+}
+
+section h1 {
+  font-size: 3rem;
+}
