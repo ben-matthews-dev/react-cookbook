@@ -223,16 +223,15 @@ function BaseRecipeForm( {initialValues, onSubmit, handleRecipeSelect} ) {
                                     data-testid="add-recipe-ingredient"
                                 >
                                     +
-                                </button>
-                                <button type="submit" 
-                                    className="btn btn--primary mr-1" 
-                                    data-testid="recipe-save">
-                                        Save
-                                </button>       
+                                </button>                   
                             </div>
                         )}
                     />
-                     
+                               <button type="submit" 
+                                    className="btn btn--primary mt-1" 
+                                    data-testid="recipe-save">
+                                        Save
+                                </button>   
                 </Form>
             )}
             </Formik>

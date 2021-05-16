@@ -40,6 +40,10 @@ html {
     margin-right: 5px;
 } 
 
+.mt-1 {
+  margin-top: 5px;
+}
+
 .app {
   max-width: 800px;
   position: relative;
